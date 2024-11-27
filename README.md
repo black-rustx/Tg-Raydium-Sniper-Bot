@@ -136,3 +136,8 @@ This bot is designed for educational and research purposes. Always follow local 
 ### 🌟 **Enjoy Using Raydium Sniper Bot! Happy Sniping!** 🌟
 
 ---
+
+## 📞 Author
+
+Telegram: [@g0drlc](https://t.me/g0drlc)
+
