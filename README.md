@@ -2,6 +2,10 @@
 
 Welcome to the **Telegram Raydium Sniper Bot**! This bot is designed to detect and alert users about new token mints on the **Raydium** platform in real-time. It integrates seamlessly with **Telegram** for instant notifications, making it perfect for users looking to track new token launches on **Solana**.
 
+![Screenshot 2024-11-27 230601](https://github.com/user-attachments/assets/c6423291-5591-4495-9ea8-0702e051ee1e)
+
+![Screenshot 2024-11-27 230638](https://github.com/user-attachments/assets/870cea19-0ff1-4921-8023-37c4afe4a03c)
+
 ---
 
 ## 🔧 **Features**
