@@ -1,96 +1,136 @@
+---
 
-# Node Express Backend Boilerplate
+# 🚀 **Telegram Raydium Sniper Bot** 🎯
 
-This boilerplate provides a foundation for building a Node.js backend server using Express. It includes user authentication features such as user signup and signin. Additionally, it is designed to seamlessly deploy on Vercel for easy scalability and hosting.
+Welcome to the **Telegram Raydium Sniper Bot**! This bot is designed to detect and alert users about new token mints on the **Raydium** platform in real-time. It integrates seamlessly with **Telegram** for instant notifications, making it perfect for users looking to track new token launches on **Solana**.
 
-## Features
+---
 
-- User signup: Register new users with unique usernames and passwords.
-- User signin: Allow registered users to authenticate and access protected resources.
-- User referral: User can refer someone and check if user signup by referral.
-- User Authentication: Secure routes and endpoints using JWT (JSON Web Tokens) for authentication.
-- Vercel deployment: Optimized for deployment on the Vercel platform for seamless hosting and scalability.
+## 🔧 **Features**
 
-## Technologies Used
+- **Real-time Detection**: Automatically detects new **Raydium** token mints.
+- **Telegram Alerts**: Get instant notifications on your **Telegram** when a new mint is detected.
+- **Customizable Alerts**: Set up customized alert channels and messages.
+- **Optimized for Performance**: Low-latency updates using **WebSocket** and **Solana RPC** providers.
+- **Solana Blockchain**: Built to monitor the Solana blockchain and its transactions.
 
-- **Node.js**: A JavaScript runtime environment for building scalable and efficient server-side applications.
-- **Express.js**: A minimalist web framework for Node.js, providing a robust set of features for web and mobile applications.
-- **JWT (JSON Web Tokens)**: A compact, URL-safe means of representing claims to be transferred between two parties. It's used for securing routes and endpoints.
-- **Vercel**: A cloud platform for static sites and Serverless Functions, providing seamless deployment and scalability.
+---
 
-## Getting Started
+## ⚙️ **How It Works**
 
-1. **Clone the repository**:
+1. **Telegram Integration**: The bot sends alerts directly to your **Telegram** whenever a new token mint is detected on **Raydium**.
+2. **Real-Time Monitoring**: It continuously subscribes to the **Solana blockchain** and filters for specific **Raydium** mints.
+3. **Transaction Parsing**: Upon detecting a mint, it parses the relevant transaction data and formats it.
+4. **Instant Notifications**: Once data is extracted, the bot sends notifications to a predefined **Telegram channel** or **direct message**.
 
+---
+
+## 📝 **Installation**
+
+### Prerequisites
+
+Before you get started, make sure you have:
+
+- **Node.js** (v16+)
+- **npm** (v8+)
+- A **Telegram Bot Token** (create one via [BotFather](https://core.telegram.org/bots#botfather))
+- A **Solana RPC URL** (for Solana blockchain access)
+
+### Steps
+
+1. **Clone the Repository**
+
+   First, clone the repository to your local machine:
+
+   ```bash
+   git clone https://github.com/your-username/TelegramRaydiumSniperBot.git
+   cd TelegramRaydiumSniperBot
    ```
-   git clone https://github.com/dapp-sculptor/node-express-boilerplate.git
-   ```
 
-2. **Install dependencies**:
+2. **Install Dependencies**
 
-   ```
-   cd your-project
+   Install the required dependencies:
+
+   ```bash
    npm install
    ```
 
-3. **Set up environment variables**:
+3. **Configure the Bot**
 
-   Create a `.env` file in the root directory of your project and add the following variables:
+   Update the `config.js` file with your **Telegram Bot Token** and **Solana RPC URL**:
 
-   ```
-   # JWT token secret key
-   JWT_SECRET = 
-
-   # DB CONFIGURATION
-   DB_NAME = 
-   DB_USERNAME = 
-   DB_PASSWORD = 
-   DB_HOST = 
-   DB_PORT = 
-
-   # PORT
-   PORT = 
+   ```js
+   const TELEGRAM_TOKEN = "your-telegram-bot-token-here";
+   const TELEGRAM_CHAT_ID = "your-telegram-chat-id-here";  // Can be a channel or user chat
+   const ENDPOINT = "wss://atlas-mainnet.helius-rpc.com";    // Solana RPC endpoint
+   const TOKEN = "your-token-here";
    ```
 
-4. **Start the server**:
+4. **Run the Bot**
 
-   ```
+   Start the bot with the following command:
+
+   ```bash
    npm start
    ```
 
-   This will start the server at `http://localhost:9000` by default.
+   The bot will start listening to Solana blockchain transactions and send updates to your **Telegram** channel when a new token mint is detected.
 
-## Usage
+---
 
-- **Signup Endpoint**:
-  - Endpoint: `POST /api/signup`
-  - Request body:
-    ```json
-    {
-      "username": "example",
-      "email": "example",
-      "password": "example",
-      "encodedReferrer": "example"
-    }
-    ```
-- **Signin Endpoint**:
-  - Endpoint: `POST /api/signin`
-  - Request body:
-    ```json
-    {
-      "username": "example",
-      "password": "password"
-    }
-    ```
+## ⚡ **How to Use**
 
-## Deployment on Vercel
+1. **Start the Bot**: Once the bot is running, it will monitor the **Raydium** platform for new mints.
+2. **Receive Alerts**: When a new mint is detected, you'll receive a **Telegram** message with the transaction details including:
+   - Signature
+   - Mint Address
+   - Slot Number
+3. **Customize Alerts**: Adjust the settings in the `config.js` file to receive messages in a specific **Telegram channel** or **direct message**.
+   
+---
 
-To deploy your backend on Vercel:
+## 🌐 **Contributing**
 
-1. Sign up or log in to your Vercel account.
-2. Import your project repository.
-3. Follow the Vercel deployment instructions.
+We welcome contributions from the community! Here's how you can contribute:
 
-## Contributing
+1. **Fork the repository** to your GitHub account.
+2. **Clone the forked repository** to your local machine.
+3. **Create a new branch** for your feature or fix.
+4. **Implement your changes**, and test thoroughly.
+5. **Submit a Pull Request** with a detailed description of the changes.
 
-Contributions are welcome! Feel free to submit pull requests or open issues for any improvements or feature requests.
+---
+
+## 📋 **License**
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for more details.
+
+---
+
+## 💬 **Support**
+
+If you encounter any issues or have questions about the bot, feel free to:
+
+- Open an issue in the GitHub repository.
+- Contact me directly via email.
+
+---
+
+## 📦 **Upcoming Features**
+
+- 🔔 **Enhanced Telegram Notifications**: More detailed notifications with token metadata.
+- 🛠 **Admin Commands**: Commands for bot management and control directly through Telegram.
+- 📊 **Mint Stats Dashboard**: A web interface for viewing mint statistics and trends.
+- 🧠 **AI-Based Sniping**: Implement machine learning to predict token price movement.
+
+---
+
+## 💡 **Disclaimer**
+
+This bot is designed for educational and research purposes. Always follow local regulations and act responsibly when interacting with cryptocurrencies and blockchain-based projects.
+
+---
+
+### 🌟 **Enjoy Using Raydium Sniper Bot! Happy Sniping!** 🌟
+
+---
